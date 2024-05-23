@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         binding.kilometrosBtn.setOnClickListener(this)
         binding.centimetrosBtn.setOnClickListener(this)
         binding.milimetrosBtn.setOnClickListener(this)
+        binding.decametrosBtn.setOnClickListener(this)
     }
 
     fun metrosKilometros(metros: String): String {
@@ -36,6 +37,11 @@ class MainActivity : AppCompatActivity(), OnClickListener {
     fun metrosMilimetros(metros: String): String {
         val conversion = (metros.toFloat() * 1000)
         return "Son: $conversion milimetros"
+    }
+
+    fun metrosDecametros(metros: String): String {
+        val conversion = (metros.toFloat() / 10)
+        return "Son: $conversion decametros"
     }
 
     override fun onClick(v: View?) {
@@ -58,6 +64,13 @@ class MainActivity : AppCompatActivity(), OnClickListener {
             binding.milimetrosBtn -> {
                 if (binding.metrosInput.text.toString().isNotEmpty()){
                     Toast.makeText(this, metrosMilimetros(binding.metrosInput.text.toString()), Toast.LENGTH_LONG).show()
+                } else {
+                    Toast.makeText(this, "Debes ingresar un número válido", Toast.LENGTH_SHORT).show()
+                }
+            }
+            binding.decametrosBtn -> {
+                if (binding.metrosInput.text.toString().isNotEmpty()){
+                    Toast.makeText(this, metrosDecametros(binding.metrosInput.text.toString()), Toast.LENGTH_LONG).show()
                 } else {
                     Toast.makeText(this, "Debes ingresar un número válido", Toast.LENGTH_SHORT).show()
                 }

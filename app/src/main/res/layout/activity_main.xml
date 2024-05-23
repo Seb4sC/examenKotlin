@@ -45,7 +45,7 @@
             android:id="@+id/kilometrosBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="5dp"
             android:text="Km"/>
 
         <com.google.android.material.button.MaterialButton
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/kilometrosBtn"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="5dp"
             android:text="Cm"/>
 
         <com.google.android.material.button.MaterialButton
@@ -61,8 +61,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/centimetrosBtn"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginHorizontal="5dp"
             android:text="Mm"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/decametrosBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_toEndOf="@id/milimetrosBtn"
+            android:text="Dm"/>
 
     </RelativeLayout>
 
